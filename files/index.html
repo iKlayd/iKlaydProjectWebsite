@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefanora Nature Resort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>              
+    
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home">
+        <h1>Stefanora Nature Resort</h1>
+        <p></p>
+        <div class="scroll-down">Scroll</div>
+    </header>
+   
+<section id="about">
+    <h2>About Stefanora Nature Resort</h2>
+
+    <p>
+        Stefanora Nature Resort is a peaceful getaway surrounded by lush greenery 
+        and beautiful mountain views. Designed for relaxation and comfort, the 
+        resort offers guests a refreshing escape from the busy city life.
+    </p>
+
+    <p>
+        Our resort features cozy rooms, scenic landscapes, and a calm environment 
+        perfect for families, couples, and travelers who want to experience nature 
+        while enjoying modern amenities.
+    </p>
+
+    <p>
+        At Stefanora Nature Resort, we believe in creating unforgettable moments 
+        where guests can relax, explore nature, and enjoy a truly refreshing stay.
+    </p>
+</section>
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <div class="rooms">
+            <div class="room-card">
+                <img src="images/room1.jpg" alt="View Deck">
+                <h3>View Deck</h3>
+                <p>View that melts your eyes.</p>
+            </div>
+
+            <div class="room-card">
+                <img src="images/room2.jpg" alt="Guest Lobby">
+                <h3>Guest Lobby</h3>
+                <p>Spectacular view and relaxing scenery.</p>
+            </div>
+
+            
+                <div class="room-card">
+                <img src="images/room3.jpg" alt="Outdoor Bar">
+                <h3>Outdoor Bar</h3>
+                <p>Chill and enjoy the stunning view.</p>
+        </div>
+        <div class="room-card">
+                <img src="images/room4.jpg" alt="Pool">
+                <h3>Pool</h3>
+                <p>Pool that cools you down.</p>
+                </div>
+                <div class="room-card">
+                <img src="images/room5.jpg" alt="Family Villa">
+                <h3>Family Villa</h3>
+                <p>Perfect for family vacations and group stays.</p>
+            </div>
+    </section>
+    
+
+    <section id="gallery">
+        <h2>Resort Gallery</h2>
+        <div class="gallery">
+            <img src="images/gallery1.jpg" alt="Gallery 1">
+            <img src="images/gallery2.jpg" alt="Gallery 2">
+            <img src="images/gallery3.jpg" alt="Gallery 3">
+            <img src="images/gallery4.jpg" alt="Gallery 4">
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book Your Stay</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="date" required>
+            <textarea placeholder="Special Requests"></textarea>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@stefanora.com</p>
+        <p>Phone: +63 912 345 6789</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Stefanora Nature Resort | All Rights Reserved</p>
+    </footer>
+
+    <script>
+    
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.background = "rgba(0, 0, 0, 0.8)";
+        } else {
+            nav.style.background = "rgba(0, 0, 0, 0.3)";
+        }
+    });
+
+   
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Thank you! Your booking request has been sent.");
+        form.reset();
+    });
+</script>
+</body>
+</html>
