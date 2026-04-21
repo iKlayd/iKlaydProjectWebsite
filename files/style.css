@@ -1,0 +1,225 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#about p{
+    padding: 10px 10%;
+    text-align: center;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Cormorant', sans-serif;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.7;
+}
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+    .hero-text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    letter-spacing: 2px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+    background: url('images/stef1.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    }
+
+html{scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Navigation */
+nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+   background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin:0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* Sections */
+section {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Rooms */
+
+#rooms {
+    min-height: 600px;
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    padding: 80px 40px;
+}
+.rooms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.room-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+     width: 350px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px gray;
+    border-radius: 20px;
+}
+    .room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.room-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+
+/* Gallery */
+.gallery img {
+    transition: transform 0.4s ease;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #c6a769;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rooms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
